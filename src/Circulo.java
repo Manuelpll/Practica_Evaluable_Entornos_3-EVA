@@ -1,3 +1,6 @@
+/**
+ * Clase hija de figura
+ */
 public class Circulo implements Figura {
     String nombre;
     int radio;
@@ -29,7 +32,11 @@ public class Circulo implements Figura {
 
     @Override
     public void duplica() {
-        radio=radio*2;
+       if(radio<1000){
+           throw new IllegalArgumentException("No se puede duplicar  más");
+       }else {
+           radio = radio * 2;
+       }//Fin if else
     }//Fin de duplica
 
     @Override

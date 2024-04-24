@@ -1,3 +1,6 @@
+/**
+ * Clase hija de figura
+ */
 public class Cuadrado implements Figura{
     String nombre;
     int lado;
@@ -26,16 +29,20 @@ public class Cuadrado implements Figura{
     @Override
     public int area() {
         return lado*lado;
-    }
+    }//Fin de area
 
     @Override
     public int perimetro() {
         return lado*4;
-    }
+    }//Fin de perimetro
 
     @Override
     public void duplica() {
-        lado=lado*2;
+        if(lado >1000){
+            throw  new IllegalArgumentException("No se puede duplicar más el lado");
+        }else {
+            lado = lado * 2;
+        }//Fin if-else
     }//Fin de duplicar
 
     @Override

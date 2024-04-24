@@ -1,3 +1,6 @@
+/**
+ * Clase hija de figura
+ */
 public class Rectangulo implements Figura{
 String nombre;
 int base;
@@ -40,8 +43,12 @@ public Rectangulo(String nombre, int base, int altura){
 
     @Override
     public void duplica() {
-      base=base*2;
-      altura=altura*2;
+    if(base >1000 || altura >1000){
+        throw new IllegalArgumentException("No se puede duplicar más");
+    }else {
+        base = base * 2;
+        altura = altura * 2;
+    }//Fin if-else
     }//Fin de duplica
 
     @Override

@@ -6,7 +6,7 @@ String nombre;
 int base;
 int altura;
 public Rectangulo(String nombre, int base, int altura){
-    this.nombre = "Rectangulo";
+    this.nombre = nombre;
     this.base = base;
     this.altura = altura;
 }//Fin del constructor

@@ -71,21 +71,25 @@ public class Main {
     public static void divide2() {
         if (!misFiguras.isEmpty()) {
             for (Figura figura : misFiguras) {
-                if (figura instanceof Circulo) {
-                    Circulo circulo4 = (Circulo) figura;
-                     circulo4.divide2();
-                    System.out.println("Figura"+circulo4.nombre+"Valor del radio: " +circulo4.radio);
-                } else if (figura instanceof Cuadrado) {
-                    Cuadrado cuadrado4 = (Cuadrado) figura;
-                    cuadrado4.divide2();
-                    System.out.println("Figura"+ cuadrado4.nombre+"Valor del Lado: "+cuadrado4.lado );
-                } else if (figura instanceof Rectangulo) {
-                    Rectangulo rectangulo4 = (Rectangulo) figura;
-                     rectangulo4.divide2();
-                    System.out.println("Figura"+rectangulo4.nombre+"Valor de la altura: " + rectangulo4.altura+"\n"+"Valor de la base"+rectangulo4.base) ;
-                } else {
-                    System.out.println("No existe esta figura");
-                }//Fin del 2º if-else
+                try {
+                    if (figura instanceof Circulo) {
+                        Circulo circulo4 = (Circulo) figura;
+                        circulo4.divide2();
+                        System.out.println("Figura " + circulo4.nombre + " Valor del radio: " + circulo4.radio);
+                    } else if (figura instanceof Cuadrado) {
+                        Cuadrado cuadrado4 = (Cuadrado) figura;
+                        cuadrado4.divide2();
+                        System.out.println("Figura " + cuadrado4.nombre + " Valor del Lado: " + cuadrado4.lado);
+                    } else if (figura instanceof Rectangulo) {
+                        Rectangulo rectangulo4 = (Rectangulo) figura;
+                        rectangulo4.divide2();
+                        System.out.println("Figura " + rectangulo4.nombre + "Valor de la altura: " + rectangulo4.altura + " Valor de la base" + rectangulo4.base);
+                    } else {
+                        System.out.println("No existe esta figura");
+                    }//Fin del 2º if-else
+                }catch (IllegalArgumentException e){
+                    System.out.println(e.getMessage());
+                }//Fin try-catch
             }//Fin for
         } else {
             System.out.println("La lista de figuras está vacía.");
@@ -95,21 +99,26 @@ public class Main {
     public static void duplica() {
         if (!misFiguras.isEmpty()) {
             for (Figura figura : misFiguras) {
-                if (figura instanceof Circulo) {
-                    Circulo circulo3 = (Circulo) figura;
-                    circulo3.duplica();
-                    System.out.println("Figura:"+circulo3.nombre+"Valor del radio: " +circulo3.radio);
-                } else if (figura instanceof Cuadrado) {
-                    Cuadrado cuadrado3 = (Cuadrado) figura;
-                    cuadrado3.duplica();
-                    System.out.println("Figura:"+ cuadrado3.nombre+"Valor del Lado: "+cuadrado3.lado);
-                } else if (figura instanceof Rectangulo) {
-                    Rectangulo rectangulo3 = (Rectangulo) figura;
-                  rectangulo3.duplica();
-                    System.out.println("Figura"+rectangulo3.nombre+"Valor de la altura: " + rectangulo3.altura+"\n"+"Valor de la base"+rectangulo3.base);
-                } else {
-                    System.out.println("No existe esta figura");
-                }//Fin del 2º if-else
+                try {
+                    if (figura instanceof Circulo) {
+                        Circulo circulo3 = (Circulo) figura;
+                        circulo3.duplica();
+                        System.out.println("Figura: " + circulo3.nombre + " Valor del radio: " + circulo3.radio);
+                    } else if (figura instanceof Cuadrado) {
+                        Cuadrado cuadrado3 = (Cuadrado) figura;
+                        cuadrado3.duplica();
+                        System.out.println("Figura: " + cuadrado3.nombre + " Valor del Lado: " + cuadrado3.lado);
+                    } else if (figura instanceof Rectangulo) {
+                        Rectangulo rectangulo3 = (Rectangulo) figura;
+                        rectangulo3.duplica();
+                        System.out.println("Figura: " + rectangulo3.nombre + " Valor de la altura: " + rectangulo3.altura  + " Valor de la base" + rectangulo3.base);
+
+                    } else {
+                        System.out.println("No existe esta figura");
+                    }//Fin del 2º if-else
+                }catch (IllegalArgumentException e){
+                    System.out.println(e.getMessage());
+                }//Fin try-catch
             }//Fin for
         } else {
             System.out.println("La lista de figuras está vacía.");
@@ -122,15 +131,15 @@ public class Main {
                 if (figura instanceof Circulo) {
                     Circulo circulo2 = (Circulo) figura;
                    int perimetroCi = circulo2.perimetro();
-                    System.out.println("Figura:"+circulo2.nombre+"El perimetro es: " + perimetroCi);
+                    System.out.println("Figura: "+circulo2.nombre+" El perimetro es: " + perimetroCi);
                 } else if (figura instanceof Cuadrado) {
                     Cuadrado cuadrado2 = (Cuadrado) figura;
                     int perimetroCu= cuadrado2.perimetro();
-                    System.out.println("Figura:"+ cuadrado2.nombre+"El perimetro del cuadrado es: " + perimetroCu);
+                    System.out.println("Figura: "+ cuadrado2.nombre+" El perimetro del cuadrado es: " + perimetroCu);
                 } else if (figura instanceof Rectangulo) {
                     Rectangulo rectangulo2 = (Rectangulo) figura;
                     int perimetroR = rectangulo2.perimetro();
-                    System.out.println("Figura"+rectangulo2.nombre+"El perimetro es: " +perimetroR);
+                    System.out.println("Figura: "+rectangulo2.nombre+" El perimetro es: " +perimetroR);
                 } else {
                     System.out.println("No existe esta figura");
                 }//Fin del 2º if-else
@@ -146,15 +155,15 @@ public class Main {
                 if (figura instanceof Circulo) {
                     Circulo circulo1 = (Circulo) figura;
                     int areaCi = circulo1.area();
-                    System.out.println("Figura:"+circulo1.nombre+"El área del círculo es: " + areaCi);
+                    System.out.println("Figura: "+circulo1.nombre+" El área del círculo es: " + areaCi);
                 } else if (figura instanceof Cuadrado) {
                     Cuadrado cuadrado1 = (Cuadrado) figura;
                    int  areaCu = cuadrado1.area();
-                    System.out.println("Figura:"+ cuadrado1.nombre+"El área del cuadrado es: " + areaCu);
+                    System.out.println("Figura: "+ cuadrado1.nombre+" El área del cuadrado es: " + areaCu);
                 } else if (figura instanceof Rectangulo) {
                     Rectangulo rectangulo1 = (Rectangulo) figura;
                     int areaR = rectangulo1.area();
-                    System.out.println("Figura"+rectangulo1.nombre+"El área del rectángulo es: " + areaR);
+                    System.out.println("Figura: "+rectangulo1.nombre+" El área del rectángulo es: " + areaR);
                 } else {
                     System.out.println("No existe esta figura");
                 }//Fin del 2º if-else
@@ -184,15 +193,15 @@ public class Main {
     public static void crearFigura(String[] parts) {
                   String figura = parts[0];   
                   switch (figura) {         
-                  case "circulo":            
+                  case "Circulo":
                       int radio = Integer.parseInt(parts[1]);
                       misFiguras.add(new Circulo(figura,radio));
                       break;
-                  case "cuadrado":    
+                  case "Cuadrado":
                      int lado =Integer.parseInt(parts[1]);
                      misFiguras.add(new Cuadrado(figura,lado));
                      break;
-                  case "rectangulo":      
+                  case "Rectangulo":
                      int base = Integer.parseInt(parts[1]);
                      int altura = Integer.parseInt(parts[2]);
                      misFiguras.add(new Rectangulo(figura,base, altura));

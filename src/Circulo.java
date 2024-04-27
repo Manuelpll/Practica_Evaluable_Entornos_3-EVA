@@ -5,7 +5,7 @@ public class Circulo implements Figura {
     String nombre;
     int radio;
     public Circulo(String nombre, int radio) {
-        this.nombre = "Circulo";
+        this.nombre = nombre;
         this.radio = radio;
     }//Fin de Circulo
 
@@ -32,7 +32,7 @@ public class Circulo implements Figura {
 
     @Override
     public void duplica() {
-       if(radio<1000){
+       if(radio>1000){
            throw new IllegalArgumentException("No se puede duplicar  más");
        }else {
            radio = radio * 2;

@@ -15,24 +15,13 @@ public class MainTest_1 {
          assertEquals(7,Main.misFiguras.size());
     }//testCargarExistente
 
-
-
-
-
-
     @Test
     public void testCargarArchivoIncorrecto() {
         String filename = "archivo_inexistente.csv";
-
-        // Redirige la salida de error estándar (stderr) a un ByteArrayOutputStream
         ByteArrayOutputStream errContent = new ByteArrayOutputStream();
         System.setErr(new PrintStream(errContent));
-
-        // Llama al método cargarArchivo() con el nombre de archivo incorrecto
         String fileName = filename;
         Main.cargarArchivo();
-
-        // Verifica que se haya impreso un mensaje de error en stderr
         assertEquals("Error al leer el archivo: " + filename + "\n", errContent.toString());
     }
 

@@ -83,7 +83,7 @@ public class Main {
                     } else if (figura instanceof Rectangulo) {
                         Rectangulo rectangulo4 = (Rectangulo) figura;
                         rectangulo4.divide2();
-                        System.out.println("Figura " + rectangulo4.nombre + "Valor de la altura: " + rectangulo4.altura + " Valor de la base" + rectangulo4.base);
+                        System.out.println("Figura " + rectangulo4.nombre + " Valor de la altura: " + rectangulo4.altura + " Valor de la base: " + rectangulo4.base);
                     } else {
                         System.out.println("No existe esta figura");
                     }//Fin del 2º if-else

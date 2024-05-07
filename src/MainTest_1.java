@@ -58,6 +58,7 @@ public class MainTest_1 {
     }// Fin dividir2Correcto
     @Test
    public void dividir2ConValor0() {
+        Main.misFiguras.clear();
         Main.misFiguras.add(new Circulo("circulo", 0));
         Main.divide2();
         assertEquals(1, Main.misFiguras.size(), "La lista de figuras debe contener una figura");
